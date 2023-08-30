@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+:root {
+--mainColor: #343a40 ;
+--color1: #007bff ;
+--color2: rgb(0,255,255) ;
+--color3: #202429;
+}
+
+.sidebar-wrapper {
+max-width: 300px;
+min-width: 300px;
+height: 100vh;
+background-color: var(--mainColor);
+box-shadow:  0 0 8px #000;
+position: fixed;
+top: 0;
+left: -100%;
+transition: 0.5s ease;
+}
+.sidebar-wrapper .sidebar {
+width: 100%;
+}
+.sidebar-wrapper .sidebar .avatar-wrapper {
+width: 100%;
+height: 180px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: #fff;
+font-size: 1.5rem;
+background: transparent;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+z-index: 10;
+}
+.sidebar-wrapper .sidebar .avatar-wrapper::after {
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+background: rgba(0,0,0,0.6);
+z-index: -11;
+}
+.sidebar-wrapper .sidebar .avatar-wrapper .avatar {
+width: 35%;
+clip-path: circle();
+box-shadow: 0 0 8px #000;
+}
+.avatar:hover{
+    transform: scale(1.3);
+}
+.sidebar-wrapper .sidebar nav {
+width: 100%;
+}
+.sidebar-wrapper .sidebar nav .menu {
+list-style: none;
+}
+.sidebar-wrapper .sidebar nav .menu li {
+border-bottom: 1px solid #494949;
+}
+.sidebar-wrapper .sidebar nav .menu li a {
+display: block;
+text-decoration: none;
+color: #fff;
+text-transform: capitalize;
+padding: 20px;
+transition: 0.5s ease;
+}
+.sidebar-wrapper .sidebar nav .menu li a:hover {
+background: -webkit-linear-gradient(45deg,var(--color1),var(--color2));
+}
+.sidebar-wrapper .sidebar nav .menu li a i {
+margin-right: 15px;
+}
+.close {
+cursor: pointer;
+position: absolute;
+top: 2px;
+right: 10px;
+}
+.close:hover{
+color: red;
+}
+.open {
+cursor: pointer;
+position: fixed;
+top: 10px;
+left: 10px;
+color: black;
+font-size: 2.2rem;
+}
+.open:hover{
+    color: white;
+}
+#check {
+display: none;
+}
+#check:checked ~ .sidebar-wrapper {
+left: 0;
+}
+
+.logout{
+    position: fixed;
+    bottom: 0;
+}
+
+@keyframes animate
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color:black ;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 
+        0 0 10px #03bcf4,
+        0 0 20px #03bcf4
+        0 0 40px #03bcf4
+        0 0 80px #03bcf4
+        0 0 160px #03bcf4;
+    }
+}
+
+
+h1{
+    color: rgb(247, 245, 245);
+   width: 100%;
+   text-align: center;
+   margin-bottom: 10%;
+  
+   
+   
+    
+}
+
+.table{
+    border:1px solid black;
+    margin-right:40%;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 1rem;
+    border-radius: 10px 10px 0 0;
+    min-width: 800px;
+    min-height: 400px;
+    box-shadow: 0 0 50px rgba(36, 160, 213, 0.15);
+}
+
+.table thead tr{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.table th,.table td{
+    padding: 12px 15px;
+}
+
+.table tbody tr{
+    border-bottom: 1px solid black;
+}
+
+.table tbody tr:nth-of-type(even){
+    background-color: whitesmoke;
+}
+
+.table tbody tr:last-of-type{
+    border-bottom: 4px solid black;
+}
+
+.table tbody tr.active-row{
+    color: black;
+    font-weight: bold;
+}
+
+.table thead th:hover{
+    background-color: dimgrey;
+    border-radius: 6px;
+}
+
+.table tbody tr:hover{
+    transform: translateY(-10px);
+}
+
+.btn1{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn2{
+    background-color: #cc3b06; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+  
+  
